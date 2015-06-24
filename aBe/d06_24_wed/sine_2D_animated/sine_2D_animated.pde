@@ -16,6 +16,7 @@ void draw() {
       float b = map(sine3, -1, 1, 0, 255);
       //stroke(v);
       //point(x, y);
+      // using the pixels array makes this work much faster
       pixels[x + y * width] = color(r, g, b);
     }
   }
