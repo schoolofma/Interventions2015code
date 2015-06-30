@@ -1,7 +1,7 @@
 void recursiveLine(float x1, float y1, float x2, float y2, int iterations) {
     
   if( iterations > 0) {
-    stroke(0, 100);
+    stroke(map(iterations, 15, 0, 0, 255));
     strokeWeight(1);
     line(x1, y1, x2, y2);
     
@@ -16,8 +16,8 @@ void recursiveLine(float x1, float y1, float x2, float y2, int iterations) {
 }
 
 void setup() {
-  size(1200, 1200);
-  background(255);
+  size(900, 900);
+  background(#EAE9E3);
   rectMode(CENTER);
   stroke(0, 100);
   noFill();
@@ -30,12 +30,12 @@ void draw() {
 
 void keyPressed() {
   if(key == 's') {
-    save("plant.png");
+    save(System.currentTimeMillis() + ".png");
   }
   if(key == ' ') {
-    background(255);
+    background(#EAE9E3);
   }
   if(key == ENTER) {
-    recursiveLine(random(width), random(height), random(width), random(height), 15);
+    recursiveLine(random(width), random(height*0.7, height), random(width), random(height*0.7, height), 15);
   }
 }
