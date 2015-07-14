@@ -3,7 +3,6 @@ import netP5.*;
 OscP5 oscP5;
 NetAddress myRemoteLocation;
 float posX=0; 
-
 float posY=0;
 
 
@@ -19,7 +18,7 @@ void draw () {
 
   fill(255, 255, 0); 
   ellipse(posX, posY, 20, 20);
-
+ ellipse(posY, posX, 2, 20);
   noStroke ();
 }
 void mouseMoved () {
