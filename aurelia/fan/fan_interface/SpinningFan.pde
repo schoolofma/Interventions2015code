@@ -3,12 +3,16 @@
 //rotation
 
 
-class SpinningFan {
 
+
+class SpinningFan {
+  //class level here is reachable from outside
   float x=0;
   float y=0;
   float sz=20;
   float rot=random(TWO_PI);
+
+  boolean isSpinning = false; // false is default
 
   //constructor called when obj is created, can also pass it some initial starting parameters
   SpinningFan(float nx, float ny) { //best not to call these x and y so not to be confused
@@ -19,16 +23,24 @@ class SpinningFan {
 
 
   void display() {
-
-    rot = rot + .01;//1/3.0;
-
-    rectMode(CENTER);
+    if (isSpinning) {
+      rot = rot + .01;//1/3.0;
+    }
+    imageMode(CENTER);
+    //rectMode(CENTER);
     pushMatrix();
     translate(x, y);
-    rotate(rot);
-         rotate(rot);
 
-    rect(0,0,sz,sz);
+    image(base, 0, 0);
+
+
+
+    rotate(rot);
+    //rotate(rot);
+
+    //rect(0, 0, sz, sz);
+    image(blades, 0, 0);
+
     popMatrix();
   }
 
