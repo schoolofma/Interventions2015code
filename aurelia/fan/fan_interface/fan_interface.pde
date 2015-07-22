@@ -1,25 +1,30 @@
-//single object
-//SpinningFan myFan;
 
+PImage blades;
+PImage base;
 //declare array of SpinningFan
-//classType [] nameOfArray = new classType[10]
-SpinningFan[] fans = new SpinningFan[100]; // declare array of objects called Particle
-//Particle[] particles = new Particle[100]; // declare array of objects called Particle
+SpinningFan[] fans = new SpinningFan[25]; // declare array of objects called fans
+
+int fanside;
+
 
 
 void setup() {
   size(600, 600);
+  blades = loadImage("fan.png");
+  base = loadImage("fan_empty.png");
+
+  fanside = base.width;
 
   //setup initial conditoins_
   //myFan = new SpinningFan(100, 100);
-  float cols = 10; //play with this # to change # columns
+  float cols = 5; //play with this # to change # columns
 
   for (int i=0; i<fans.length; i++) {
     //columns code go from 1d index position to 2d grid position, also used in image
-    float rowX = i % cols;
+    float rowX = i % cols; // i%col = i remainder (how many times does i go into columns)
     float colY = (i-rowX) / cols; // finds corresponding row
 
-    fans[i] = new SpinningFan(rowX*80 +100, colY*80 + 100); // play w/ these: spaced out by 20, offset by 100
+    fans[i] = new SpinningFan(rowX*fanside +fanside/2, colY*fanside + fanside/2); // play w/ these: spaced out by 20, offset by 100
     //fans[i] = new SpinningFan(i*30,100);
     // particles[i] = new Particle();
   }
@@ -36,4 +41,15 @@ void draw() {
     //  particles[i].update();
   }
   //myFan.display();
+}
+
+void mouseMoved() {
+  for (SpinningFan thisfan : fans) { //short hand for looping through the array fans and assigning that one the one thisfan
+    if (mouseX > thisfan.x-fanside/2 && mouseX < thisfan.x+fanside/2 && 
+      mouseY > thisfan.y-fanside/2 && mouseY < thisfan.y+fanside/2) { 
+      thisfan.isSpinning = true;
+    } else {
+      thisfan.isSpinning = false;
+    }
+  }
 }
