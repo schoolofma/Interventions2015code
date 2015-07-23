@@ -14,7 +14,7 @@ void draw(){
   
   int mySize = butterfly.width * butterfly.height;
   int index = (int)random( 0, mySize);
-  color c = butterfly.pixels[rp];
+  color c = butterfly.pixels[0];
   float x = index % butterfly.width;
   float y = (index - x) / butterfly.width;
   
