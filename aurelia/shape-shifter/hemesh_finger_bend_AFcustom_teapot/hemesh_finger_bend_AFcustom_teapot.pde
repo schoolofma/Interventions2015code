@@ -4,6 +4,7 @@ import wblut.core.*;
 import wblut.hemesh.*;
 import wblut.geom.*;
 
+//HE_Mesh mesh; // test with sphere
 HE_Mesh teapot; // this is the name of the obj
 WB_Render render;
 
@@ -13,10 +14,6 @@ HEM_BendFinger modifierb;
 HEM_BendFinger modifierc;
 
 
-int acounter=0;
-int bcounter=0;
-int ccounter=0;
-
 PShape result;
 
 void setup() {
@@ -24,24 +21,27 @@ void setup() {
   smooth(8);
   noStroke();
 
-  //importing custom shape utah-teapot.obj
-  teapot = new HEC_FromOBJFile(sketchPath("utah-teapot.obj")).create();
+//importing custom shape utah-teapot.obj
+teapot = new HEC_FromOBJFile(sketchPath("utah-teapot.obj")).create();
+//teapot = new HE_Mesh(creator); //need this? 
+//teapot.smooth(1);////need this? subdivision of shape 
+//HET_Diagnosis.validate(teapot);//need this? 
 
-  //importing sphere
-  //  HEC_Icosahedron creator=new HEC_Icosahedron();
-  //  creator.setEdge(300); 
-  //  mesh = new HE_Mesh(creator); 
-  //
-  //  mesh.smooth(3);//subdivision of shape
-  //  HET_Diagnosis.validate(mesh);
+//  //importing sphere to test
+//  HEC_Icosahedron creator=new HEC_Icosahedron();
+//  creator.setEdge(300); 
+//  mesh = new HE_Mesh(creator); 
+//  //
+//  mesh.smooth(3);//subdivision of shape
+//  HET_Diagnosis.validate(mesh);
 
   //modifier a
   modifiera=new HEM_BendFinger(); 
-  modifiera.setFingerAxis(200, 0, 0, 200, 200, 0); //set the axis for the force
+  modifiera.setFingerAxis(100, 0, 0, 100, 100, 0); //set the axis for the force
   modifiera.setMagnitude(0.01); // the force
   P = new WB_Point(0, 0, 0); // center point of the shape
   modifiera.setCenter(P);  //center of force go towards P
-  modifiera.setRadius(50);  //build cylinder around axis line
+  modifiera.setRadius(100);  //build cylinder around axis line
 
   //modifier b
   modifierb=new HEM_BendFinger(); 
@@ -52,10 +52,13 @@ void setup() {
 
   //modifier c
   modifierc=new HEM_BendFinger(); 
-  modifierc.setFingerAxis(200, 0, 0, 200, 200, 0); //set the axis
+  stroke(0);
+  line(100, 0, 0, 100, 100, 0); //draw the line
+  noStroke();
+  modifierc.setFingerAxis(100, 0, 0, 100, 100, 0); //set the axis
   modifierc.setMagnitude(0.01); // the force
   P = new WB_Point(0, 0, 0); // center point of the shape
-  modifierc.setCenter(P).setRadius(50);  
+  modifierc.setCenter(P).setRadius(100);  //try changig
 
   render = new WB_Render(this);
 }
@@ -69,21 +72,21 @@ void draw() {
   directionalLight(255, 220, 200, 1, 1, -1);
   directionalLight(50, 187, 130, -1, -1, 1);
 
-  scale(16);
+  scale(12);
 
 
   if (keyPressed) {
     if (key == ' ') {
       teapot.modify(modifiera); //force over time
-      modifiera.weakenMagnitude(0.95);
+//      modifiera.weakenMagnitude(0.95);
     }
     if (key == 'b') {
       teapot.modify(modifierb); //force over time
-      modifierb.weakenMagnitude(0.95);
+//      modifierb.weakenMagnitude(0.95);
     }
     if (key == 'c') {
       teapot.modify(modifierc); //force over time
-      modifierc.weakenMagnitude(0.95);
+//      modifierc.weakenMagnitude(0.95);
     }
   }
 
@@ -91,7 +94,7 @@ void draw() {
   //shape(result);
   //add for custom
 
-  //  render.drawFaces(mesh);
+  //  render.drawFaces(mesh); //to test
   render.drawFaces(teapot);
 }
 

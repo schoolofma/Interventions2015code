@@ -13,9 +13,9 @@ HEM_BendFinger modifierb;
 HEM_BendFinger modifierc;
 
 
-int acounter=0;
-int bcounter=0;
-int ccounter=0;
+//int acounter=0;
+//int bcounter=0;
+//int ccounter=0;
 
 PShape result;
 
