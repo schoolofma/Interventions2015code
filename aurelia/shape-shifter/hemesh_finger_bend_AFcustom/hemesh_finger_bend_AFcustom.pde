@@ -4,7 +4,7 @@ import wblut.core.*;
 import wblut.hemesh.*;
 import wblut.geom.*;
 
-HE_Mesh mesh, broken;
+HE_Mesh mesh;
 WB_Render render;
 
 WB_Point P;
@@ -24,17 +24,18 @@ void setup() {
   smooth(8);
   noStroke();
 
-//change the next 2 lines for custom shape
+  //change the next 2 lines for custom shape
   HEC_Icosahedron creator=new HEC_Icosahedron();
   creator.setEdge(300); 
   mesh = new HE_Mesh(creator); 
-  
+
   mesh.smooth(3);//subdivision of shape
   HET_Diagnosis.validate(mesh);
 
   //modifier a
   modifiera=new HEM_BendFinger(); 
   modifiera.setFingerAxis(200, 0, 0, 200, 200, 0); //set the axis for the force
+  modifiera.setMagnitude(0.01); // the force
   P = new WB_Point(0, 0, 0); // center point of the shape
   modifiera.setCenter(P);  //center of force go towards P
   modifiera.setRadius(50);  //build cylinder around axis line
@@ -42,12 +43,14 @@ void setup() {
   //modifier b
   modifierb=new HEM_BendFinger(); 
   modifierb.setFingerAxis(200, 0, 0, 200, 200, 0); //change axis
+  modifierb.setMagnitude(0.01); // the force
   P = new WB_Point(0, 0, 0); // stays the same
   modifierb.setCenter(P).setRadius(50);  
 
   //modifier c
   modifierc=new HEM_BendFinger(); 
   modifierc.setFingerAxis(200, 0, 0, 200, 200, 0); //set the axis
+  modifierc.setMagnitude(0.01); // the force
   P = new WB_Point(0, 0, 0); // center point of the shape
   modifierc.setCenter(P).setRadius(50);  
 
@@ -62,29 +65,24 @@ void draw() {
   directionalLight(50, 187, 130, -1, -1, 1);
 
   if (keyPressed) {
-    if (key == ' '&& acounter<600) {
-      acounter++; //same as acounter = acounter +1
+    if (key == ' ') {
+      mesh.modify(modifiera); //force over time
+      modifiera.weakenMagnitude(0.95);
     }
-    if (key == 'b'&& bcounter<600) {
-      bcounter++; //same as acounter = acounter +1
+    if (key == 'b') {
+      mesh.modify(modifierb); //force over time
+      modifierb.weakenMagnitude(0.95);
     }
-    if (key == 'c'&& ccounter<600) {
-      ccounter++; //same as acounter = acounter +1
+    if (key == 'c') {
+      mesh.modify(modifierc); //force over time
+      modifierc.weakenMagnitude(0.95);
     }
   }
-  broken = mesh.get();
-  modifiera.setMagnitude(map(acounter, 0, 600, 0, 0.4)); // the force
-  broken.modify(modifiera); //force over time
-
-  modifierb.setMagnitude(map(bcounter, 0, 600, 0, 0.4)); // the force
-  broken.modify(modifierb); //force over time
-
-  modifierc.setMagnitude(map(ccounter, 0, 600, 0, 0.4)); // the force
-  broken.modify(modifierc); //force over time
 
   //result = render.toSmoothPShape(broken);
   //shape(result);
   //add for custom
 
-  render.drawFaces(broken);
+  render.drawFaces(mesh);
 }
+

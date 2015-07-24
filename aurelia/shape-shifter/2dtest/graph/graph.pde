@@ -42,7 +42,7 @@ void setup() {
 
 void draw() {
   if (keyPressed) {
-    if (key == 'a') {
+    if (key == 'a')  {
       acounter++; //same as acounter = acounter +1
     }
     if (key == 'b') {
