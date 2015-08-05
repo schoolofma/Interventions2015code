@@ -45,10 +45,8 @@ void loop()
 {
   potValue = analogRead(potPin);
   motorValue = map(potValue, 0, 1023, 0, 255);
-analogWrite(TIP120pin, 255); // By changing values from 0 to 255 you can control motor speed
-  delay(1000);
-  analogWrite(TIP120pin, 0);
-  delay(5000);
+analogWrite(TIP120pin, motorValue); // By changing values from 0 to 255 you can control motor speed
+  
 }
 
 

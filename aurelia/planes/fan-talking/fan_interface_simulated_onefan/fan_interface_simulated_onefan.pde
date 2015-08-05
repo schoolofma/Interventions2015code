@@ -27,10 +27,10 @@ int motorval; //data sent to the serial port
 void setup() {
   size(600, 600);
 
-  //to tes
-  println(Serial.list()); //use the first time to know USB port where data comes from
-  String portName = Serial.list()[5]; // tell processing the port that communicates with arduino
-  port = new Serial(this, portName, 9600); // will open the channel to send the data to send to arduino
+  ////to tes
+  //println(Serial.list()); //use the first time to know USB port where data comes from
+  //String portName = Serial.list()[5]; // tell processing the port that communicates with arduino
+  //port = new Serial(this, portName, 9600); // will open the channel to send the data to send to arduino
 
   //fans
   blades = loadImage("fan.png");
@@ -52,7 +52,10 @@ void setup() {
     //time
     start = millis(); //now
 
-    // simulated pathway
+    //#1 LOAD JSON, ARRAY LIST, 
+    // simulated pathway w/ 1 random value
+    
+    
     latitude = round(random(0, width/2));
     longitude = round(random(0, height/2));
   }
@@ -62,20 +65,20 @@ void draw() {
   background(0);
   // fan display
   //if (mode == 0) {
-  
-  
+
+
   for (int i=0; i<fans.length; i++) {
     fans[i].display();
     //draw square based on global var info
     fill(255, 0, 0, 20);
     rect(col*fanside, row*fanside, fanside, fanside);
   }
-  
-  
+
+
   String arduinoMessage = fans[0].motorval + "\n";
   //println(arduinoMessage);
-  port.write(arduinoMessage); //sends to arduino
-  
+  //port.write(arduinoMessage); //sends to arduino
+
   //} else if (mode == 1) {
   //simulated pathway over time
   if (millis() - start > 100) {//has it been 2 seconds since our last 'start'
@@ -120,13 +123,13 @@ void getNewDataPoint() {
       fill(255, 255, 255);
       ellipse(latitude, longitude, 4, 4);
     } else {
-          thisfan.isSpinning = false;
-    }    
+      thisfan.isSpinning = false;
+    }
   }
-  
+
   fans[0].isSpinning = true;//DELETE THIS LINE
-  
-  
+
+
 
 
   // //draw long and lat lines - how is this disappeared???
