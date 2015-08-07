@@ -1,5 +1,4 @@
 
-//
 
 //fans
 PImage blades;
@@ -31,10 +30,10 @@ int motorval; //data sent to the serial port
 void setup() {
   size(600, 600);
 
-  ////to tes
-  //println(Serial.list()); //use the first time to know USB port where data comes from
-  //String portName = Serial.list()[5]; // tell processing the port that communicates with arduino
-  //port = new Serial(this, portName, 9600); // will open the channel to send the data to send to arduino
+  //to tes
+  println(Serial.list()); //use the first time to know USB port where data comes from
+  String portName = Serial.list()[5]; // tell processing the port that communicates with arduino
+  port = new Serial(this, portName, 9600); // will open the channel to send the data to send to arduino
 
   //fans
   blades = loadImage("fan.png");
@@ -79,14 +78,16 @@ void draw() {
     rect(col*fanside, row*fanside, fanside, fanside);
   }
 
-
-  String arduinoMessage = fans[0].motorval + "\n";
-  //println(arduinoMessage);
-  //port.write(arduinoMessage); //sends to arduino
+  String arduinoMessage = "";
+  for (int i=0; i<fans.length; i++) {
+    arduinoMessage += fans[i].motorval + ", ";
+  }
+  println(arduinoMessage);
+  port.write(arduinoMessage); //sends to arduino
 
   //} else if (mode == 1) {
   //simulated pathway over time
-  if (millis() - start > 100) {//has it been 1/10th of a second since our last 'start'
+  if (millis() - start > 1000) {//has it been 1/10th of a second since our last 'start'
     //whatever we want to do every 2 seconds goes here
     getNewDataPoint();
     start = millis();
