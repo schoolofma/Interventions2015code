@@ -1,5 +1,5 @@
 // Define which pin to be used to communicate with Base pin of TIP120 transistors
-int pins [9] = {2, 3, 6, 7, 8, 9, 10, 11, 12}; //11, ...
+int pins [9] = {7, 8, 9, 4, 10, 3, 11, 2, 12}; //11, ...
 
 void setup()
 {
@@ -8,6 +8,8 @@ void setup()
   for (int i = 0; i < 9; i++) {
     pinMode(pins[i], OUTPUT); // Set pin for output to control TIP120 Base pin
   }
+  
+  establishContact();  // send a byte to establish contact until Processing responds 
   
 }
 
@@ -24,5 +26,12 @@ void loop()
     Serial.write("\n");
   }
   delay(100);    // Wait 100ms for next reading
+}
+
+void establishContact() {
+ while (Serial.available() <= 0) {
+      Serial.write('A');   // send a capital A
+      delay(300);
+  }
 }
 
