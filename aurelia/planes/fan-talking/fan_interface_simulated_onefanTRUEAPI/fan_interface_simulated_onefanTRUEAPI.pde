@@ -125,7 +125,6 @@ void getNewDataPoint() {
     currentFlightPosition = 0;
   }
   
-
   //original API ranges
   float latitude = (currentFlight.lats.get(currentFlightPosition));   //get 1st position of 1st flight y
   float longitude =(currentFlight.lons.get(currentFlightPosition));   //get 1st position of 1st flight x
