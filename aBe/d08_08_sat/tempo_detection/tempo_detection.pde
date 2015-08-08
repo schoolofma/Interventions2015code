@@ -31,7 +31,7 @@ void draw() {
   
   // lerp is used here for "easing" (smooth interpolation between currentY and targetY)
   // it means "move 0.03% from currentY towards targetY"
-  currentY = lerp(currentY, targetY, 0.03);
+  currentY = lerp(currentY, targetY, 0.1);
   
   // Draw a very straight line
   line(0, currentY, width, currentY);
