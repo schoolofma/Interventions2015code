@@ -31,11 +31,13 @@ void setup() {
   background(222, 227, 232);
   textureMode(NORMAL);
   smooth(8);
+  
   // container for letters 
-  shapes = new ArrayList <Letter> ();
+  shapes = new ArrayList <Letter>();
   sounds = new ArrayList<Sound>();
 
   render=new WB_Render(this);
+  
   minim = new Minim( this );
   out   = minim.getLineOut();
 }
@@ -52,6 +54,7 @@ void draw() {
     //when letters go off the screen then remove
     if (l.y < 0) {
       shapes.remove(i);
+      //remove sound too
       println("remove", i);
     }
   }
@@ -73,7 +76,6 @@ void keyPressed() {
       //keycode is used to chose the which distortion
       last.distort(0);
       wavelast.soundUpdate(2);
-
       break;
 
     case 'U'://inflate
@@ -141,7 +143,6 @@ void keyPressed() {
   }
 
   switch (key) {
-
     //for creating shapes
   case 't'://cube
     // add a new letter object to container when key is pressed
