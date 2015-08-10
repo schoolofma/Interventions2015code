@@ -1,0 +1,218 @@
+{
+  "request": {
+    "extendedOptions": {},
+    "maxFlights": {
+      "requested": "5",
+      "interpreted": 5
+    },
+    "leftLongitude": {
+      "requested": "-125.0",
+      "interpreted": -125
+    },
+    "topLatitude": {
+      "requested": "45.0",
+      "interpreted": 45
+    },
+    "rightLongitude": {
+      "requested": "-120.0",
+      "interpreted": -120
+    },
+    "url": "https://api.flightstats.com/flex/flightstatus/rest/v2/json/flightsNear/45/-125/40/-120",
+    "bottomLatitude": {
+      "requested": "40.0",
+      "interpreted": 40
+    }
+  },
+  "appendix": {},
+  "flightPositions": [
+    {
+      "callsign": "SKW5604",
+      "flightId": 581871211,
+      "positions": [{
+        "date": "2015-08-08T12:34:00.000Z",
+        "speedMph": 168,
+        "lon": -124.1,
+        "altitudeFt": 217,
+        "source": "derived",
+        "lat": 40.9667
+      }],
+      "source": "derived"
+    },
+    {
+      "heading": 3.836215983523249,
+      "callsign": "QXE328",
+      "flightId": 581925352,
+      "positions": [
+        {
+          "date": "2015-08-08T12:28:50.000Z",
+          "speedMph": 416,
+          "lon": -122.7504,
+          "altitudeFt": 20000,
+          "source": "derived",
+          "lat": 44.1602
+        },
+        {
+          "date": "2015-08-08T12:29:30.000Z",
+          "speedMph": 542,
+          "lon": -122.7713,
+          "altitudeFt": 20171,
+          "source": "derived",
+          "lat": 43.9366
+        },
+        {
+          "date": "2015-08-08T12:29:50.000Z",
+          "speedMph": 406,
+          "lon": -122.7398,
+          "altitudeFt": 20000,
+          "source": "derived",
+          "lat": 44.2552
+        },
+        {
+          "date": "2015-08-08T12:30:30.000Z",
+          "speedMph": 438,
+          "lon": -122.7726,
+          "altitudeFt": 19698,
+          "source": "derived",
+          "lat": 43.9232
+        },
+        {
+          "date": "2015-08-08T12:30:50.000Z",
+          "speedMph": 396,
+          "lon": -122.7299,
+          "altitudeFt": 20000,
+          "source": "derived",
+          "lat": 44.3497
+        },
+        {
+          "date": "2015-08-08T12:31:30.000Z",
+          "speedMph": 455,
+          "lon": -122.7614,
+          "altitudeFt": 20771,
+          "source": "derived",
+          "lat": 44.0306
+        },
+        {
+          "date": "2015-08-08T12:31:50.000Z",
+          "speedMph": 410,
+          "lon": -122.7239,
+          "altitudeFt": 20000,
+          "source": "derived",
+          "lat": 44.4523
+        },
+        {
+          "date": "2015-08-08T12:32:30.000Z",
+          "speedMph": 471,
+          "lon": -122.7486,
+          "altitudeFt": 21844,
+          "source": "derived",
+          "lat": 44.142
+        },
+        {
+          "date": "2015-08-08T12:32:50.000Z",
+          "speedMph": 418,
+          "lon": -122.7141,
+          "altitudeFt": 20000,
+          "source": "derived",
+          "lat": 44.5536
+        },
+        {
+          "date": "2015-08-08T12:33:30.000Z",
+          "speedMph": 488,
+          "lon": -122.7311,
+          "altitudeFt": 22913,
+          "source": "derived",
+          "lat": 44.2571
+        }
+      ],
+      "source": "derived"
+    },
+    {
+      "heading": 296.61703189527765,
+      "callsign": "AAL1475",
+      "flightId": 581934591,
+      "positions": [
+        {
+          "date": "2015-08-08T12:24:00.000Z",
+          "speedMph": 465,
+          "lon": -122.0169,
+          "altitudeFt": 22000,
+          "source": "derived",
+          "lat": 45.2656
+        },
+        {
+          "date": "2015-08-08T12:25:00.000Z",
+          "speedMph": 474,
+          "lon": -121.8692,
+          "altitudeFt": 24000,
+          "source": "derived",
+          "lat": 45.2136
+        },
+        {
+          "date": "2015-08-08T12:26:36.000Z",
+          "speedMph": 491,
+          "lon": -121.6283,
+          "altitudeFt": 26520,
+          "source": "derived",
+          "lat": 45.1291
+        },
+        {
+          "date": "2015-08-08T12:27:36.000Z",
+          "speedMph": 522,
+          "lon": -121.4671,
+          "altitudeFt": 27695,
+          "source": "derived",
+          "lat": 45.0753
+        },
+        {
+          "date": "2015-08-08T12:28:36.000Z",
+          "speedMph": 543,
+          "lon": -121.302,
+          "altitudeFt": 29448,
+          "source": "derived",
+          "lat": 45.0178
+        },
+        {
+          "date": "2015-08-08T12:29:36.000Z",
+          "speedMph": 541,
+          "lon": -121.1428,
+          "altitudeFt": 30669,
+          "source": "derived",
+          "lat": 44.9608
+        },
+        {
+          "date": "2015-08-08T12:30:36.000Z",
+          "speedMph": 552,
+          "lon": -120.9761,
+          "altitudeFt": 31971,
+          "source": "derived",
+          "lat": 44.902
+        },
+        {
+          "date": "2015-08-08T12:31:36.000Z",
+          "speedMph": 532,
+          "lon": -120.8234,
+          "altitudeFt": 33614,
+          "source": "derived",
+          "lat": 44.8464
+        },
+        {
+          "date": "2015-08-08T12:32:36.000Z",
+          "speedMph": 525,
+          "lon": -120.6649,
+          "altitudeFt": 34651,
+          "source": "derived",
+          "lat": 44.7901
+        },
+        {
+          "date": "2015-08-08T12:33:36.000Z",
+          "speedMph": 521,
+          "lon": -120.5079,
+          "altitudeFt": 35752,
+          "source": "derived",
+          "lat": 44.7335
+        }
+      ],
+      "source": "derived"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "request": {
+    "extendedOptions": {},
+    "maxFlights": {
+      "requested": "5",
+      "interpreted": 5
+    },
+    "leftLongitude": {
+      "requested": "13.2",
+      "interpreted": 13.2
+    },
+    "topLatitude": {
+      "requested": "52.6",
+      "interpreted": 52.6
+    },
+    "rightLongitude": {
+      "requested": "13.409",
+      "interpreted": 13.409
+    },
+    "url": "https://api.flightstats.com/flex/flightstatus/rest/v2/json/flightsNear/52.600/13.20/52.521/13.409",
+    "bottomLatitude": {
+      "requested": "52.521",
+      "interpreted": 52.521
+    }
+  },
+  "appendix": {},
+  "flightPositions": [
+    {
+      "heading": 274.10944701753726,
+      "tailNumber": "GEUPO",
+      "callsign": "BAW993",
+      "flightId": 581953461,
+      "positions": [
+        {
+          "date": "2015-08-08T13:02:15.000Z",
+          "speedMph": 36,
+          "lon": 13.2434,
+          "altitudeFt": 223,
+          "source": "derived",
+          "lat": 52.556
+        },
+        {
+          "date": "2015-08-08T13:03:00.000Z",
+          "speedMph": 168,
+          "lon": 13.2917,
+          "altitudeFt": 121,
+          "source": "derived",
+          "lat": 52.5539
+        },
+        {
+          "date": "2015-08-08T13:04:00.000Z",
+          "speedMph": 168,
+          "lon": 13.2917,
+          "altitudeFt": 121,
+          "source": "derived",
+          "lat": 52.5539
+        }
+      ],
+      "source": "derived"
+    },
+    {
+      "heading": 209.76704029365615,
+      "callsign": "DLH191",
+      "flightId": 581953420,
+      "positions": [
+        {
+          "date": "2015-08-08T12:57:33.000Z",
+          "speedMph": 186,
+          "lon": 13.151,
+          "altitudeFt": 1657,
+          "source": "derived",
+          "lat": 52.4857
+        },
+        {
+          "date": "2015-08-08T12:59:33.000Z",
+          "speedMph": 190,
+          "lon": 13.1803,
+          "altitudeFt": 50,
+          "source": "derived",
+          "lat": 52.5169
+        },
+        {
+          "date": "2015-08-08T13:00:33.000Z",
+          "speedMph": 196,
+          "lon": 13.1205,
+          "altitudeFt": 676,
+          "source": "derived",
+          "lat": 52.4877
+        },
+        {
+          "date": "2015-08-08T13:01:00.000Z",
+          "speedMph": 168,
+          "lon": 13.2917,
+          "altitudeFt": 121,
+          "source": "derived",
+          "lat": 52.5539
+        },
+        {
+          "date": "2015-08-08T13:01:33.000Z",
+          "speedMph": 160,
+          "lon": 13.3211,
+          "altitudeFt": 1561,
+          "source": "derived",
+          "lat": 52.5623
+        }
+      ],
+      "source": "derived"
+    }
+  ]
+}
