@@ -1,0 +1,115 @@
+{
+  "request": {
+    "extendedOptions": {},
+    "maxFlights": {
+      "requested": "5",
+      "interpreted": 5
+    },
+    "leftLongitude": {
+      "requested": "13.2",
+      "interpreted": 13.2
+    },
+    "topLatitude": {
+      "requested": "52.6",
+      "interpreted": 52.6
+    },
+    "rightLongitude": {
+      "requested": "13.409",
+      "interpreted": 13.409
+    },
+    "url": "https://api.flightstats.com/flex/flightstatus/rest/v2/json/flightsNear/52.600/13.20/52.521/13.409",
+    "bottomLatitude": {
+      "requested": "52.521",
+      "interpreted": 52.521
+    }
+  },
+  "appendix": {},
+  "flightPositions": [{
+    "heading": 50.7950647350596,
+    "callsign": "BTI217",
+    "flightId": 581940861,
+    "positions": [
+      {
+        "date": "2015-08-08T12:37:48.000Z",
+        "speedMph": 264,
+        "lon": 13.8557,
+        "altitudeFt": 8573,
+        "source": "derived",
+        "lat": 52.8343
+      },
+      {
+        "date": "2015-08-08T12:38:48.000Z",
+        "speedMph": 250,
+        "lon": 13.7761,
+        "altitudeFt": 7651,
+        "source": "derived",
+        "lat": 52.7951
+      },
+      {
+        "date": "2015-08-08T12:39:48.000Z",
+        "speedMph": 222,
+        "lon": 13.6302,
+        "altitudeFt": 5810,
+        "source": "derived",
+        "lat": 52.723
+      },
+      {
+        "date": "2015-08-08T12:40:48.000Z",
+        "speedMph": 208,
+        "lon": 13.564,
+        "altitudeFt": 4892,
+        "source": "derived",
+        "lat": 52.6901
+      },
+      {
+        "date": "2015-08-08T12:41:48.000Z",
+        "speedMph": 194,
+        "lon": 13.5023,
+        "altitudeFt": 3970,
+        "source": "derived",
+        "lat": 52.6593
+      },
+      {
+        "date": "2015-08-08T12:42:48.000Z",
+        "speedMph": 179,
+        "lon": 13.4449,
+        "altitudeFt": 3051,
+        "source": "derived",
+        "lat": 52.6307
+      },
+      {
+        "date": "2015-08-08T12:43:48.000Z",
+        "speedMph": 165,
+        "lon": 13.392,
+        "altitudeFt": 2129,
+        "source": "derived",
+        "lat": 52.6043
+      },
+      {
+        "date": "2015-08-08T12:44:48.000Z",
+        "speedMph": 151,
+        "lon": 13.3435,
+        "altitudeFt": 1211,
+        "source": "derived",
+        "lat": 52.58
+      },
+      {
+        "date": "2015-08-08T12:45:48.000Z",
+        "speedMph": 137,
+        "lon": 13.2994,
+        "altitudeFt": 289,
+        "source": "derived",
+        "lat": 52.5578
+      },
+      {
+        "date": "2015-08-08T12:46:00.000Z",
+        "speedMph": 134,
+        "lon": 13.2917,
+        "altitudeFt": 121,
+        "source": "derived",
+        "lat": 52.5539
+      }
+    ],
+    "source": "derived"
+  }]
+}

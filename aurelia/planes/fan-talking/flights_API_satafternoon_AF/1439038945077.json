@@ -1,0 +1,76 @@
+{
+  "request": {
+    "extendedOptions": {},
+    "maxFlights": {
+      "requested": "5",
+      "interpreted": 5
+    },
+    "leftLongitude": {
+      "requested": "13.2",
+      "interpreted": 13.2
+    },
+    "topLatitude": {
+      "requested": "52.6",
+      "interpreted": 52.6
+    },
+    "rightLongitude": {
+      "requested": "13.409",
+      "interpreted": 13.409
+    },
+    "url": "https://api.flightstats.com/flex/flightstatus/rest/v2/json/flightsNear/52.600/13.20/52.521/13.409",
+    "bottomLatitude": {
+      "requested": "52.521",
+      "interpreted": 52.521
+    }
+  },
+  "appendix": {},
+  "flightPositions": [{
+    "heading": 133.50737146553993,
+    "tailNumber": "DALSA",
+    "callsign": "BER3550",
+    "flightId": 581953368,
+    "positions": [
+      {
+        "date": "2015-08-08T12:52:57.000Z",
+        "speedMph": 261,
+        "lon": 14.0629,
+        "altitudeFt": 7881,
+        "source": "derived",
+        "lat": 52.0778
+      },
+      {
+        "date": "2015-08-08T12:54:57.000Z",
+        "speedMph": 24,
+        "lon": 13.247,
+        "altitudeFt": 1174,
+        "source": "derived",
+        "lat": 52.5566
+      },
+      {
+        "date": "2015-08-08T12:56:00.000Z",
+        "speedMph": 168,
+        "lon": 13.2917,
+        "altitudeFt": 121,
+        "source": "derived",
+        "lat": 52.5539
+      },
+      {
+        "date": "2015-08-08T12:56:00.000Z",
+        "speedMph": 168,
+        "lon": 13.2917,
+        "altitudeFt": 121,
+        "source": "derived",
+        "lat": 52.5539
+      },
+      {
+        "date": "2015-08-08T12:56:57.000Z",
+        "speedMph": 207,
+        "lon": 13.3257,
+        "altitudeFt": 1216,
+        "source": "derived",
+        "lat": 52.564
+      }
+    ],
+    "source": "derived"
+  }]
+}

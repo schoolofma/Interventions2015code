@@ -1,0 +1,295 @@
+{
+  "request": {
+    "extendedOptions": {},
+    "maxFlights": {
+      "requested": "5",
+      "interpreted": 5
+    },
+    "leftLongitude": {
+      "requested": "13.16",
+      "interpreted": 13.16
+    },
+    "topLatitude": {
+      "requested": "52.6",
+      "interpreted": 52.6
+    },
+    "rightLongitude": {
+      "requested": "13.61",
+      "interpreted": 13.61
+    },
+    "url": "https://api.flightstats.com/flex/flightstatus/rest/v2/json/flightsNear/52.60/13.16/52.38/13.61",
+    "bottomLatitude": {
+      "requested": "52.38",
+      "interpreted": 52.38
+    }
+  },
+  "appendix": {},
+  "flightPositions": [
+    {
+      "heading": 310.5999348521281,
+      "callsign": "BER6887",
+      "flightId": 581903573,
+      "positions": [
+        {
+          "date": "2015-08-08T18:36:12.000Z",
+          "speedMph": 83,
+          "lon": 13.0038,
+          "altitudeFt": 8671,
+          "source": "derived",
+          "lat": 52.7045
+        },
+        {
+          "date": "2015-08-08T18:37:12.000Z",
+          "speedMph": 89,
+          "lon": 13.0298,
+          "altitudeFt": 7697,
+          "source": "derived",
+          "lat": 52.691
+        },
+        {
+          "date": "2015-08-08T18:38:12.000Z",
+          "speedMph": 95,
+          "lon": 13.0576,
+          "altitudeFt": 6722,
+          "source": "derived",
+          "lat": 52.6765
+        },
+        {
+          "date": "2015-08-08T18:39:12.000Z",
+          "speedMph": 100,
+          "lon": 13.0871,
+          "altitudeFt": 5751,
+          "source": "derived",
+          "lat": 52.6612
+        },
+        {
+          "date": "2015-08-08T18:40:12.000Z",
+          "speedMph": 106,
+          "lon": 13.1183,
+          "altitudeFt": 4777,
+          "source": "derived",
+          "lat": 52.6449
+        },
+        {
+          "date": "2015-08-08T18:41:12.000Z",
+          "speedMph": 112,
+          "lon": 13.1512,
+          "altitudeFt": 3802,
+          "source": "derived",
+          "lat": 52.6277
+        },
+        {
+          "date": "2015-08-08T18:42:12.000Z",
+          "speedMph": 118,
+          "lon": 13.1858,
+          "altitudeFt": 2831,
+          "source": "derived",
+          "lat": 52.6096
+        },
+        {
+          "date": "2015-08-08T18:43:12.000Z",
+          "speedMph": 124,
+          "lon": 13.2221,
+          "altitudeFt": 1857,
+          "source": "derived",
+          "lat": 52.5905
+        },
+        {
+          "date": "2015-08-08T18:44:12.000Z",
+          "speedMph": 129,
+          "lon": 13.2601,
+          "altitudeFt": 883,
+          "source": "derived",
+          "lat": 52.5706
+        },
+        {
+          "date": "2015-08-08T18:45:00.000Z",
+          "speedMph": 134,
+          "lon": 13.2917,
+          "altitudeFt": 121,
+          "source": "derived",
+          "lat": 52.5539
+        }
+      ],
+      "source": "derived"
+    },
+    {
+      "heading": 204.57823030906022,
+      "tailNumber": "DABGS",
+      "callsign": "BER8573",
+      "flightId": 581961150,
+      "positions": [
+        {
+          "date": "2015-08-08T18:36:31.000Z",
+          "speedMph": 402,
+          "lon": 13.4253,
+          "altitudeFt": 11249,
+          "source": "derived",
+          "lat": 52.1094
+        },
+        {
+          "date": "2015-08-08T18:37:31.000Z",
+          "speedMph": 383,
+          "lon": 13.4871,
+          "altitudeFt": 9956,
+          "source": "derived",
+          "lat": 52.1924
+        },
+        {
+          "date": "2015-08-08T18:38:31.000Z",
+          "speedMph": 361,
+          "lon": 13.541,
+          "altitudeFt": 8653,
+          "source": "derived",
+          "lat": 52.2741
+        },
+        {
+          "date": "2015-08-08T18:39:31.000Z",
+          "speedMph": 338,
+          "lon": 13.5885,
+          "altitudeFt": 7315,
+          "source": "derived",
+          "lat": 52.3524
+        },
+        {
+          "date": "2015-08-08T18:40:31.000Z",
+          "speedMph": 315,
+          "lon": 13.6172,
+          "altitudeFt": 5990,
+          "source": "derived",
+          "lat": 52.4293
+        },
+        {
+          "date": "2015-08-08T18:41:31.000Z",
+          "speedMph": 302,
+          "lon": 13.6331,
+          "altitudeFt": 4678,
+          "source": "derived",
+          "lat": 52.5027
+        },
+        {
+          "date": "2015-08-08T18:42:32.000Z",
+          "speedMph": 251,
+          "lon": 13.6087,
+          "altitudeFt": 3609,
+          "source": "derived",
+          "lat": 52.5597
+        },
+        {
+          "date": "2015-08-08T18:43:32.000Z",
+          "speedMph": 221,
+          "lon": 13.5419,
+          "altitudeFt": 2579,
+          "source": "derived",
+          "lat": 52.5837
+        },
+        {
+          "date": "2015-08-08T18:44:32.000Z",
+          "speedMph": 273,
+          "lon": 13.4568,
+          "altitudeFt": 1655,
+          "source": "derived",
+          "lat": 52.5827
+        },
+        {
+          "date": "2015-08-08T18:45:32.000Z",
+          "speedMph": 361,
+          "lon": 13.351,
+          "altitudeFt": 804,
+          "source": "derived",
+          "lat": 52.558
+        }
+      ],
+      "source": "derived"
+    },
+    {
+      "heading": 196.30287893556923,
+      "tailNumber": "DAIPM",
+      "callsign": "DLH200",
+      "flightId": 581900998,
+      "positions": [
+        {
+          "date": "2015-08-08T18:36:13.000Z",
+          "speedMph": 372,
+          "lon": 13.5238,
+          "altitudeFt": 9048,
+          "source": "derived",
+          "lat": 52.268
+        },
+        {
+          "date": "2015-08-08T18:37:13.000Z",
+          "speedMph": 357,
+          "lon": 13.5627,
+          "altitudeFt": 7794,
+          "source": "derived",
+          "lat": 52.3494
+        },
+        {
+          "date": "2015-08-08T18:38:13.000Z",
+          "speedMph": 349,
+          "lon": 13.5858,
+          "altitudeFt": 6472,
+          "source": "derived",
+          "lat": 52.4314
+        },
+        {
+          "date": "2015-08-08T18:39:13.000Z",
+          "speedMph": 321,
+          "lon": 13.6059,
+          "altitudeFt": 5159,
+          "source": "derived",
+          "lat": 52.5065
+        },
+        {
+          "date": "2015-08-08T18:40:13.000Z",
+          "speedMph": 288,
+          "lon": 13.61,
+          "altitudeFt": 4221,
+          "source": "derived",
+          "lat": 52.5795
+        },
+        {
+          "date": "2015-08-08T18:41:13.000Z",
+          "speedMph": 205,
+          "lon": 13.5709,
+          "altitudeFt": 3253,
+          "source": "derived",
+          "lat": 52.622
+        },
+        {
+          "date": "2015-08-08T18:42:13.000Z",
+          "speedMph": 214,
+          "lon": 13.5005,
+          "altitudeFt": 2155,
+          "source": "derived",
+          "lat": 52.6357
+        },
+        {
+          "date": "2015-08-08T18:43:13.000Z",
+          "speedMph": 261,
+          "lon": 13.4253,
+          "altitudeFt": 1229,
+          "source": "derived",
+          "lat": 52.631
+        },
+        {
+          "date": "2015-08-08T18:44:13.000Z",
+          "speedMph": 324,
+          "lon": 13.3318,
+          "altitudeFt": 209,
+          "source": "derived",
+          "lat": 52.6057
+        },
+        {
+          "date": "2015-08-08T18:45:13.000Z",
+          "speedMph": 315,
+          "lon": 13.2489,
+          "altitudeFt": -893,
+          "source": "derived",
+          "lat": 52.5708
+        }
+      ],
+      "source": "derived"
+    }
+  ]
+}

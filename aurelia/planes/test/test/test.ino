@@ -1,7 +1,7 @@
 //test for one fan change pin value to test per fan
 
 
-int pin=4;
+int pin=12;
 
 void setup() {
   // put your setup code here, to run once:

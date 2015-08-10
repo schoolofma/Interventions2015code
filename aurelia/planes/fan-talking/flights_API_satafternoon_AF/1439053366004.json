@@ -1,0 +1,28 @@
+{
+  "request": {
+    "extendedOptions": {},
+    "maxFlights": {
+      "requested": "5",
+      "interpreted": 5
+    },
+    "leftLongitude": {
+      "requested": "13.16",
+      "interpreted": 13.16
+    },
+    "topLatitude": {
+      "requested": "52.6",
+      "interpreted": 52.6
+    },
+    "rightLongitude": {
+      "requested": "13.61",
+      "interpreted": 13.61
+    },
+    "url": "https://api.flightstats.com/flex/flightstatus/rest/v2/json/flightsNear/52.60/13.16/52.38/13.61",
+    "bottomLatitude": {
+      "requested": "52.38",
+      "interpreted": 52.38
+    }
+  },
+  "appendix": {},
+  "flightPositions": []
+}
