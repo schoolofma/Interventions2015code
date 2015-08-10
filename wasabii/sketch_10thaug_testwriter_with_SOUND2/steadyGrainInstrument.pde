@@ -1,4 +1,4 @@
-class SteadyGrainInstrument implements Instrument {
+class SteadyGrainInstrument implements WasabiiInstrument {
   // create all variables that must be used throughout the class
   GranulateSteady chopper;
 
@@ -27,6 +27,10 @@ class SteadyGrainInstrument implements Instrument {
   void noteOff()
   {
     chopper.unpatch( out );
+  }
+  
+  void distort(int mode){
+  
   }
 }
 

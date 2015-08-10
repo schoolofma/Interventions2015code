@@ -6,8 +6,7 @@ import wblut.geom.*;
 import ddf.minim.*;
 import ddf.minim.ugens.*;
 ArrayList <Letter> shapes;
-ArrayList<Sound> sounds;
-ArrayList<SteadyGrainInstrument> instruments;
+ArrayList<WasabiiInstrument> instruments;
 
 
 //like a camera so it stays in the main prog
@@ -21,9 +20,6 @@ WB_Line L;
 Minim minim;
 AudioOutput out;
 
-
-
-
 void setup() {
 
   size(800, 800, P3D);
@@ -32,8 +28,7 @@ void setup() {
   smooth(8);
   // container for letters 
   shapes = new ArrayList <Letter> ();
-  sounds = new ArrayList<Sound>();
-  instruments = new ArrayList<SteadyGrainInstrument>();
+  instruments = new ArrayList<WasabiiInstrument>();
 
   render=new WB_Render(this);
   minim = new Minim( this );
@@ -42,6 +37,11 @@ void setup() {
   instruments.add(new SteadyGrainInstrument( 110f, 0.5, 1.0, 0.5 ));
   instruments.add(new SteadyGrainInstrument( 1320f, 0.3, 1.0, 0.103 ));
   instruments.add(new SteadyGrainInstrument( 775f, 0.5, 1.0, 0.0755 ));
+  instruments.add(new Sound(Waves.SINE));
+  instruments.add(new Sound(Waves.SAW));
+  instruments.add(new Sound(Waves.TRIANGLE));
+  instruments.add(new Sound(Waves.SQUARE));
+  instruments.add(new Sound(Waves.QUARTERPULSE));
 }
 
 void draw() {
@@ -67,8 +67,8 @@ void draw() {
 
 void keyPressed() {
   println(key, shapes.size());
-  Sound wavelast;
-  SteadyGrainInstrument lastInstrument;
+//  Sound wavelast;
+//  WasabiiInstrument lastInstrument;
   Letter last;
   if (shapes.size()>0) {
     switch (key) {
@@ -77,26 +77,19 @@ void keyPressed() {
       //how to distort only the last shape
       last = shapes.get(shapes.size()-1);
       //keycode is used to chose the which distortion
-      last.distort(0);
-      wavelast = sounds.get(sounds.size()-1);
-      wavelast.soundUpdate(2);
-
+      last.distort(0);      
       break;
-
     case 'U'://inflate
       //how to distort only the last shape
       last = shapes.get(shapes.size()-1);
       //keycode is used to chose the which distortion
       last.distort(1);
-      wavelast = sounds.get(sounds.size()-1);
-      wavelast.soundUpdate(2);
+      //change pitch to random
 
       break;
     case 'p'://croc
       last = shapes.get(shapes.size()-1);
       last.distort(2);
-      wavelast = sounds.get(sounds.size()-1);
-      wavelast.soundUpdate(3);
       break;
     case'-'://bendy d = -
       last = shapes.get(shapes.size()-1);
@@ -170,41 +163,36 @@ void keyPressed() {
   case 't'://cube
     // add a new letter object to container when key is pressed
     shapes.add(new Letter(0));
-    sounds.add(new Sound(Waves.SINE));
+    out.playNote( 0, 1.0, instruments.get(3));
     break;
   case '4'://plato
     shapes.add(new Letter(1));
-    sounds.add(new Sound(Waves.TRIANGLE));
+    out.playNote( 0, 0.5, instruments.get(4));    
     break;
   case'5'://ellipse
     shapes.add(new Letter(2));
-    sounds.add(new Sound(Waves.SAW));
+    out.playNote( 0, 1.0, instruments.get(5));
     break;
   case'8'://torus
     shapes.add(new Letter(3));
-    sounds.add(new Sound(Waves.SQUARE));
+    out.playNote( 0, 1.0, instruments.get(6));
     break;
   case'9'://cylinder
     shapes.add(new Letter(4));
-    sounds.add(new Sound(Waves.SQUARE));
-    sounds.add(new Sound(Waves.SAW));
+    out.playNote( 0, 1.0, instruments.get(7));
     break;
   case 'f'://achemedies
     shapes.add(new Letter(5));
-    lastInstrument = instruments.get(instruments.size()-1);
     out.playNote( 0, 1.0, instruments.get(0));
-
     break;
   case 'v'://cone
     shapes.add(new Letter(6));
-    lastInstrument = instruments.get(instruments.size()-1);
     out.playNote( 0, 1.0, instruments.get(1));
     break;
   case 'j'://polygon
     println(shapes.size());
     shapes.add(new Letter(7));
-    //    lastInstrument = instruments.get(instruments.size()-1);
-    out.playNote( 0, 1.0, instruments.get(2));
+    out.playNote( 0, 1, instruments.get(2));
     println(shapes.size());
     break;
   }
