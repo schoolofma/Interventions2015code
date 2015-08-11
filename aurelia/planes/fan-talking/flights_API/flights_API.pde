@@ -6,7 +6,7 @@ int currentFlightSlot;
 int currentFlightPosition;
 
 //API vars
-int intervalAPI = 5000; //call API every 5 seconds
+int intervalAPI = 50000; //call API every 50 seconds
 int lastTimeAPI;
 String query = "https://api.flightstats.com/flex/flightstatus/rest/v2/json/flightsNear/45/-125/40/-120?appId=927ec82e&appKey=db433b3835c3e1243047ac0d66a5fea3&maxFlights=5";
 
@@ -22,7 +22,7 @@ int intervalAnimation;
 int col, row; //used to draw red rectangles on screen
 
 //turn debugging messages on or off
-boolean debug = false;
+boolean debug = true;
 
 void setup(){
   size(600, 600);
@@ -56,6 +56,7 @@ void setup(){
 
 void draw(){
   //update API data
+  //if enough time has passed
   if(millis() - lastTimeAPI > intervalAPI){
     getNewData();
     lastTimeAPI = millis();
@@ -85,7 +86,7 @@ void moveToNextFlightPosition(){
   currentFlightPosition = currentFlightPosition + 1;
   
   if( currentFlightPosition > currentFlight.coordinates.size() - 1){
-    currentFlightSlot = (currentFlightSlot + 1) % flights.size();  
+    currentFlightSlot = (currentFlightSlot + 1) % flights.size();  //go through all flight slots
     currentFlightPosition = 0;
   }
   
@@ -103,10 +104,10 @@ void moveToNextFlightPosition(){
   //col = round(map(longitude, -125, -120, 0, 4));
   
   //map to columns and rows, which are used to draw the red rectangles in the draw function
-  col = round(map(latitudeInPixels, 0, width, 0, 4));
-  row = round(map(longitudeInPixels, 0, height, 0, 4));
+  col = round(map(latitudeInPixels, 0, width, 0, cols));
+  row = round(map(longitudeInPixels, 0, height, 0, rows));
   
-  println(row);
+  println(col,row);
   
   for(int j=0; j<cols; j++){
     for(int i=0; i<rows; i++){
@@ -203,5 +204,3 @@ void serialEvent(Serial myPort) {
 //    }
   }
 }
-
-

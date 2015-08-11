@@ -1,7 +1,7 @@
 //test for many fan change pin values in array to test per fan
 
 
-int pins[] = {7,8,9,4h,10,3,11,2,12};
+int pins[] = {7,8,9,4,10,3,11,2,12};
 int current=0;
 
 void setup() {

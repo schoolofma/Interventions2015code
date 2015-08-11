@@ -1,0 +1,60 @@
+{
+  "request": {
+    "extendedOptions": {},
+    "maxFlights": {
+      "requested": "5",
+      "interpreted": 5
+    },
+    "leftLongitude": {
+      "requested": "13.2",
+      "interpreted": 13.2
+    },
+    "topLatitude": {
+      "requested": "52.6",
+      "interpreted": 52.6
+    },
+    "rightLongitude": {
+      "requested": "13.409",
+      "interpreted": 13.409
+    },
+    "url": "https://api.flightstats.com/flex/flightstatus/rest/v2/json/flightsNear/52.600/13.20/52.521/13.409",
+    "bottomLatitude": {
+      "requested": "52.521",
+      "interpreted": 52.521
+    }
+  },
+  "appendix": {},
+  "flightPositions": [{
+    "heading": 274.10944701753726,
+    "tailNumber": "GEUPO",
+    "callsign": "BAW993",
+    "flightId": 581953461,
+    "positions": [
+      {
+        "date": "2015-08-08T13:02:15.000Z",
+        "speedMph": 36,
+        "lon": 13.2434,
+        "altitudeFt": 223,
+        "source": "derived",
+        "lat": 52.556
+      },
+      {
+        "date": "2015-08-08T13:03:00.000Z",
+        "speedMph": 168,
+        "lon": 13.2917,
+        "altitudeFt": 121,
+        "source": "derived",
+        "lat": 52.5539
+      },
+      {
+        "date": "2015-08-08T13:04:00.000Z",
+        "speedMph": 168,
+        "lon": 13.2917,
+        "altitudeFt": 121,
+        "source": "derived",
+        "lat": 52.5539
+      }
+    ],
+    "source": "derived"
+  }]
+}

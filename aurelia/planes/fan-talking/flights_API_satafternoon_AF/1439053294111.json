@@ -1,0 +1,84 @@
+{
+  "request": {
+    "extendedOptions": {},
+    "maxFlights": {
+      "requested": "5",
+      "interpreted": 5
+    },
+    "leftLongitude": {
+      "requested": "13.16",
+      "interpreted": 13.16
+    },
+    "topLatitude": {
+      "requested": "52.6",
+      "interpreted": 52.6
+    },
+    "rightLongitude": {
+      "requested": "13.61",
+      "interpreted": 13.61
+    },
+    "url": "https://api.flightstats.com/flex/flightstatus/rest/v2/json/flightsNear/52.60/13.16/52.38/13.61",
+    "bottomLatitude": {
+      "requested": "52.38",
+      "interpreted": 52.38
+    }
+  },
+  "appendix": {},
+  "flightPositions": [{
+    "heading": 247.22670369389718,
+    "tailNumber": "OOSSU",
+    "callsign": "BEL2588",
+    "flightId": 581953381,
+    "positions": [
+      {
+        "date": "2015-08-08T16:51:07.000Z",
+        "speedMph": 176,
+        "lon": 13.217,
+        "altitudeFt": 794,
+        "source": "derived",
+        "lat": 52.5431
+      },
+      {
+        "date": "2015-08-08T16:53:07.000Z",
+        "speedMph": 112,
+        "lon": 13.2624,
+        "altitudeFt": -1794,
+        "source": "derived",
+        "lat": 52.5547
+      },
+      {
+        "date": "2015-08-08T16:54:00.000Z",
+        "speedMph": 168,
+        "lon": 13.2917,
+        "altitudeFt": 121,
+        "source": "derived",
+        "lat": 52.5539
+      },
+      {
+        "date": "2015-08-08T16:54:07.000Z",
+        "speedMph": 169,
+        "lon": 13.2835,
+        "altitudeFt": 197,
+        "source": "derived",
+        "lat": 52.5528
+      },
+      {
+        "date": "2015-08-08T16:55:07.000Z",
+        "speedMph": 114,
+        "lon": 13.2521,
+        "altitudeFt": 1160,
+        "source": "derived",
+        "lat": 52.5548
+      },
+      {
+        "date": "2015-08-08T16:56:07.000Z",
+        "speedMph": 259,
+        "lon": 13.1754,
+        "altitudeFt": 2772,
+        "source": "derived",
+        "lat": 52.5479
+      }
+    ],
+    "source": "derived"
+  }]
+}
