@@ -175,7 +175,7 @@ void draw() {
 
 void keyPressed() {
   Letter last;
-
+  
   switch (key) {
     //for creating shapes
   case 't'://cube
@@ -227,9 +227,12 @@ void keyPressed() {
     numPolygons ++;
     break;
   }
-  lastSound.play();
-
-  if (shapes.size()>0) {
+  if(lastSound != null){
+    lastSound.play();
+  }
+  
+  if (shapes.size() > 0) {
+    println(shapes);
     switch (key) {
       //for modifiers
     case '2'://extrude-expand
@@ -305,8 +308,6 @@ void keyPressed() {
 
       lastSound.mergeOnSide();
       break;
-
-
     case 'r'://stretch
       last=shapes.get(shapes.size()-1);
       last.distort(7);
@@ -323,7 +324,6 @@ void keyPressed() {
       break;
 
     case 'm'://bg
-      println(shapes.size());
       last=shapes.get(shapes.size()-1);
       last.distort(10);
       break;
@@ -339,8 +339,8 @@ void keyPressed() {
       break;
 
     case 'w'://velo
-      last=shapes.get(shapes.size()-1);
-      last.distort(13);
+        last = shapes.get(shapes.size()-1);
+        last.distort(13);
       break;
 
     case '.':
